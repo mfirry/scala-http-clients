@@ -7,7 +7,7 @@ object Featherbed {
 
   def main(args: Array[String]): Unit = {
     val client =
-      new featherbed.Client(new URL("https://api.github.com/users/unicredit"))
+      new featherbed.Client(new URL("https://api.github.com/users/scala-italy"))
 
     Await.result {
       val request =

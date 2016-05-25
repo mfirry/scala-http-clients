@@ -14,7 +14,7 @@ object Http4s {
     // there might be a better way to build a Task[Request]
     val req = Task.now(
         Request(headers = Headers(header),
-                uri = Uri.uri("https://api.github.com/users/unicredit")))
+                uri = Uri.uri("https://api.github.com/users/scala-italy")))
 
     // we're blocking on purpose
     val x = client.fetchAs[String](req).unsafePerformSync.mkString

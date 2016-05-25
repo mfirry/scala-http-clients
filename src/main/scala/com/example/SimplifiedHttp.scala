@@ -5,7 +5,7 @@ import scalaj.http.Http
 object SimplifiedHttp {
 
   def main(args: Array[String]): Unit = {
-    val response = Http("https://api.github.com/users/unicredit")
+    val response = Http("https://api.github.com/users/scala-italy")
       .header("User-Agent", "Awesome-Octocat-App")
       .asString
     println(response.body)
