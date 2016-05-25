@@ -1,8 +1,8 @@
-name := """schlep"""
+name := """schlepp"""
 
-version := "1.0"
+version := "0.1.0"
 
-scalaVersion := "2.11.7"
+scalaVersion := "2.11.8"
 
 libraryDependencies += "io.github.finagle" %% "featherbed-core" % "0.1.0-SNAPSHOT" exclude("io.netty", "netty")
 libraryDependencies += "io.github.finagle" %% "featherbed-circe" % "0.1.0-SNAPSHOT"
