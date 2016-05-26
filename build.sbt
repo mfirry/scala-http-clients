@@ -16,6 +16,10 @@ libraryDependencies ++= Seq(
   "org.http4s" %% "http4s-blaze-client" % http4sVersion
 )
 
+libraryDependencies ++= Seq(
+   "com.typesafe.play" %% "play-ws" % "2.4.6"
+)
+
 libraryDependencies += "org.scalaj" %% "scalaj-http" % "2.3.0"
 
 reformatOnCompileSettings

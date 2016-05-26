@@ -6,8 +6,8 @@ import com.twitter.util.Await
 object Featherbed {
 
   def main(args: Array[String]): Unit = {
-    val client =
-      new featherbed.Client(new URL("https://api.github.com/users/scala-italy"))
+    val client = new featherbed.Client(
+        new URL("https://api.github.com/users/scala-italy"))
 
     Await.result {
       val request =
