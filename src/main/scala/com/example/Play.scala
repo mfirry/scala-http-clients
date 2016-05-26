@@ -15,7 +15,8 @@ object Play {
     val builder = new AsyncHttpClientConfig.Builder()
     val ws: WSClient = new NingWSClient(builder.build())
     val url = "https://api.github.com/users/scala-italy"
-    val res = ws.url(url).get
+    val res =
+      ws.url(url).withHeaders("User-Agent" -> "Awesome-Octocat-App").get
 
     val x = Await.result(res, 1 second)
     println(x.body)
