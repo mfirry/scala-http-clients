@@ -7,7 +7,7 @@ scalaVersion := "2.11.8"
 libraryDependencies += "io.github.finagle" %% "featherbed-core" % "0.1.0-SNAPSHOT" exclude("io.netty", "netty")
 libraryDependencies += "io.github.finagle" %% "featherbed-circe" % "0.1.0-SNAPSHOT"
 
-libraryDependencies += "net.databinder.dispatch" %% "dispatch-core" % "0.11.2"
+libraryDependencies += "com.eed3si9n" %% "gigahorse-core" % "0.1-SNAPSHOT"
 
 lazy val http4sVersion = "0.13.2a"
 
@@ -21,5 +21,7 @@ libraryDependencies ++= Seq(
 )
 
 libraryDependencies += "org.scalaj" %% "scalaj-http" % "2.3.0"
+
+libraryDependencies += "net.databinder.dispatch" %% "dispatch-core" % "0.11.2"
 
 reformatOnCompileSettings
