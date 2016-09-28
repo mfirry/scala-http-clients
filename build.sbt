@@ -4,10 +4,9 @@ version := "0.1.0"
 
 scalaVersion := "2.11.8"
 
-libraryDependencies += "io.github.finagle" %% "featherbed-core" % "0.1.0-SNAPSHOT" exclude("io.netty", "netty")
-libraryDependencies += "io.github.finagle" %% "featherbed-circe" % "0.1.0-SNAPSHOT"
-
-libraryDependencies += "com.eed3si9n" %% "gigahorse-core" % "0.1.0"
+libraryDependencies += "io.github.finagle" %% "featherbed-core" % "0.2.1-SNAPSHOT" exclude("io.netty", "netty")
+libraryDependencies += "io.github.finagle" %% "featherbed-circe" % "0.2.1-SNAPSHOT"
+libraryDependencies += "com.eed3si9n" %% "gigahorse-core" % "0.1.1"
 
 lazy val http4sVersion = "0.13.2a"
 
@@ -23,5 +22,9 @@ libraryDependencies ++= Seq(
 libraryDependencies += "org.scalaj" %% "scalaj-http" % "2.3.0"
 
 libraryDependencies += "net.databinder.dispatch" %% "dispatch-core" % "0.11.2"
+
+libraryDependencies += "fr.hmil" %% "roshttp" % "1.1.0"
+
+resolvers += Resolver.sonatypeRepo("snapshots")
 
 reformatOnCompileSettings
