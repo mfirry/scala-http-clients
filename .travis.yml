@@ -1,3 +1,2 @@
 language: scala
-script:
-  - sbt compile
+script: sbt compile
