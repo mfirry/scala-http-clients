@@ -3,7 +3,7 @@ import httpc.all._
 object httpcExample extends App {
 
   val command = get("https://api.github.com/users/scala-italy",
-                    headers = List(("User-Agent", "Awesome-Octocat-App")))
+                    headers = List(userAgent("Awesome-Octocat-App")))
 
   // Run the command into an Either[HttpError, Response]
   run(command) match {
