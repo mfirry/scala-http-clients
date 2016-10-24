@@ -25,6 +25,8 @@ libraryDependencies += "net.databinder.dispatch" %% "dispatch-core" % "0.11.2"
 
 libraryDependencies += "fr.hmil" %% "roshttp" % "1.1.0"
 
+libraryDependencies += "io.github.amrhassan" %% "httpc" % "0.3.0-SNAPSHOT"
+
 resolvers += Resolver.sonatypeRepo("snapshots")
 
 reformatOnCompileSettings
