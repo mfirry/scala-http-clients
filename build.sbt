@@ -25,8 +25,11 @@ libraryDependencies += "net.databinder.dispatch" %% "dispatch-core" % "0.11.2"
 
 libraryDependencies += "fr.hmil" %% "roshttp" % "1.1.0"
 
-libraryDependencies += "io.github.amrhassan" %% "httpc" % "0.3.0-SNAPSHOT"
+libraryDependencies += "io.github.amrhassan" %% "httpc" % "0.3.0"
+
+libraryDependencies += "io.shaka" %% "naive-http" % "90"
 
 resolvers += Resolver.sonatypeRepo("snapshots")
+resolvers += "Tim Tennant's repo" at "http://dl.bintray.com/timt/repo/"
 
 reformatOnCompileSettings

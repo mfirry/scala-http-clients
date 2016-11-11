@@ -1,5 +1,6 @@
 import httpc.all._
 
+// https://github.com/amrhassan/scala-httpc
 object httpcExample extends App {
 
   val command = get("https://api.github.com/users/scala-italy",

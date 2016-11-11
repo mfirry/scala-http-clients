@@ -9,7 +9,6 @@ object Dispatch {
 
   def main(args: Array[String]): Unit = {
 
-
     val header = Map("User-Agent" -> "Awesome-Octocat-App")
     val github = url("https://api.github.com/users/scala-italy") <:< header
 
