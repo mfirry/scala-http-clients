@@ -29,6 +29,8 @@ libraryDependencies += "io.github.amrhassan" %% "httpc" % "0.3.0"
 
 libraryDependencies += "io.shaka" %% "naive-http" % "90"
 
+libraryDependencies += "io.spray" % "spray-client_2.11" % "1.3.4"
+
 resolvers += Resolver.sonatypeRepo("snapshots")
 resolvers += "Tim Tennant's repo" at "http://dl.bintray.com/timt/repo/"
 
