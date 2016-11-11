@@ -3,7 +3,7 @@ name := """schlepp"""
 version := "0.1.0"
 
 lazy val root = project.in(file(".")).
-  aggregate(dispatch, gigahorse, http4s, play, scalaj, roshttp, spray, shaka)
+  aggregate(dispatch, gigahorse, http4s, httpc, play, roshttp, scalaj, shaka, spray)
 
 lazy val dispatch =
   (project in file("dispatch"))
