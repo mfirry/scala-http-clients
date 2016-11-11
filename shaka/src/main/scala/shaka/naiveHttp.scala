@@ -1,3 +1,5 @@
+package com.example
+
 import io.shaka.http.Http.http
 import io.shaka.http.Request.{GET, POST}
 import io.shaka.http.HttpHeader.USER_AGENT

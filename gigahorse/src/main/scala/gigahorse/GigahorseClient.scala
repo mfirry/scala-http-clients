@@ -1,4 +1,5 @@
 package com.example
+
 import scala.concurrent._
 import scala.concurrent.duration._
 import gigahorse.Gigahorse

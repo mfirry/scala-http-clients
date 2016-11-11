@@ -94,7 +94,8 @@ lazy val spray =
   (project in file("spray"))
     .settings(
       libraryDependencies ++= Seq(
-         "io.spray" % "spray-client_2.11" % "1.3.4"
+        "com.typesafe.akka" % "akka-actor_2.11" % "2.3.4",
+        "io.spray" % "spray-client_2.11" % "1.3.4"
       )
     )
 
