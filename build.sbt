@@ -2,36 +2,100 @@ name := """schlepp"""
 
 version := "0.1.0"
 
-scalaVersion := "2.11.8"
+lazy val root = project.in(file(".")).
+  aggregate(dispatch, gigahorse, http4s, play, scalaj, roshttp, spray, shaka)
 
-libraryDependencies += "io.github.finagle" %% "featherbed-core" % "0.2.1-SNAPSHOT" exclude("io.netty", "netty")
-libraryDependencies += "io.github.finagle" %% "featherbed-circe" % "0.2.1-SNAPSHOT"
-libraryDependencies += "com.eed3si9n" %% "gigahorse-core" % "0.1.1"
+lazy val dispatch =
+  (project in file("dispatch"))
+    .settings(
+      scalaVersion := "2.11.8",
+      libraryDependencies ++= Seq(
+        "net.databinder.dispatch" %% "dispatch-core" % "0.11.2"
+      )
+    )
 
-lazy val http4sVersion = "0.13.2a"
+lazy val httpc =
+  (project in file("httpc"))
+    .settings(
+      scalaVersion := "2.11.8",
+      libraryDependencies ++= Seq(
+        "io.github.amrhassan" %% "httpc" % "0.3.0"
+      )
+    )
 
-libraryDependencies ++= Seq(
-  "org.http4s" %% "http4s-dsl" % http4sVersion,
-  "org.http4s" %% "http4s-blaze-client" % http4sVersion
-)
+lazy val gigahorse =
+  (project in file("gigahorse"))
+    .settings(
+      scalaVersion := "2.11.8",
+      libraryDependencies ++= Seq(
+        "com.eed3si9n" %% "gigahorse-core" % "0.1.1"
+      )
+    )
 
-libraryDependencies ++= Seq(
-   "com.typesafe.play" %% "play-ws" % "2.4.6"
-)
+lazy val http4s =
+  (project in file("http4s"))
+    .settings(
+      scalaVersion := "2.11.8",
+      libraryDependencies ++= Seq(
+        "org.http4s" %% "http4s-dsl" % "0.13.2a",
+        "org.http4s" %% "http4s-blaze-client" % "0.13.2a"
+      )
+    )
 
-libraryDependencies += "org.scalaj" %% "scalaj-http" % "2.3.0"
+// lazy val featherbed =
+//   (project in file("featherbed"))
+//     .settings(
+//       scalaVersion := "2.11.8",
+//       libraryDependencies ++= Seq(
+//         "io.github.finagle" %% "featherbed-core" % "0.2.1-SNAPSHOT" exclude("io.netty", "netty"),
+//         "io.github.finagle" %% "featherbed-circe" % "0.2.1-SNAPSHOT"
+//       ),
+//       resolvers += Resolver.sonatypeRepo("snapshots")
+//     )
 
-libraryDependencies += "net.databinder.dispatch" %% "dispatch-core" % "0.11.2"
+lazy val play =
+  (project in file("play"))
+    .settings(
+      scalaVersion := "2.11.8",
+      libraryDependencies ++= Seq(
+         "com.typesafe.play" %% "play-ws" % "2.4.6"
+      )
+    )
 
-libraryDependencies += "fr.hmil" %% "roshttp" % "1.1.0"
+lazy val scalaj =
+  (project in file("scalaj"))
+    .settings(
+      scalaVersion := "2.11.8",
+      libraryDependencies ++= Seq(
+         "org.scalaj" %% "scalaj-http" % "2.3.0"
+      )
+    )
 
-libraryDependencies += "io.github.amrhassan" %% "httpc" % "0.3.0"
+lazy val roshttp =
+  (project in file("roshttp"))
+    .settings(
+      scalaVersion := "2.11.8",
+      libraryDependencies ++= Seq(
+         "fr.hmil" %% "roshttp" % "1.1.0"
+      )
+    )
 
-libraryDependencies += "io.shaka" %% "naive-http" % "90"
+lazy val shaka =
+  (project in file("shaka"))
+    .settings(
+      scalaVersion := "2.11.8",
+      libraryDependencies ++= Seq(
+         "io.shaka" %% "naive-http" % "90"
+      ),
+      resolvers += "Tim Tennant's repo" at "http://dl.bintray.com/timt/repo/"
+    )
 
-libraryDependencies += "io.spray" % "spray-client_2.11" % "1.3.4"
-
-resolvers += Resolver.sonatypeRepo("snapshots")
-resolvers += "Tim Tennant's repo" at "http://dl.bintray.com/timt/repo/"
+lazy val spray =
+  (project in file("spray"))
+    .settings(
+      libraryDependencies ++= Seq(
+         "io.spray" % "spray-client_2.11" % "1.3.4"
+      )
+    )
 
 reformatOnCompileSettings
