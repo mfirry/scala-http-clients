@@ -13,4 +13,4 @@ Totally a WIP (like all my other projects).
 - [naive-http](https://github.com/timt/naive-http)
 - [Spray](http://spray.io/documentation/1.2.4/spray-client/)
 
-[![Build Status](https://travis-ci.org/mfirry/schlepp.png?branch=master)](https://travis-ci.org/mfirry/schlepp)
+[![Build Status](https://travis-ci.org/mfirry/scala-http-clients.png?branch=master)](https://travis-ci.org/mfirry/scala-http-clients)
