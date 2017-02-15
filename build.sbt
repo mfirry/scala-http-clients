@@ -99,4 +99,13 @@ lazy val spray =
       )
     )
 
+lazy val `fs2-http` =
+  (project in file("fs2-http"))
+    .settings(
+      scalaVersion := "2.11.8",
+      libraryDependencies ++= Seq(
+        "com.spinoco" %% "fs2-http" % "0.1.3"
+      )
+    )
+
 reformatOnCompileSettings
