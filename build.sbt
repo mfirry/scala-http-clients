@@ -1,9 +1,9 @@
-name := """schlepp"""
+name := """scala-http-clients"""
 
-version := "0.1.0"
+version := "0.1.1"
 
 lazy val root = project.in(file(".")).
-  aggregate(dispatch, gigahorse, http4s, httpc, play, roshttp, scalaj, shaka, spray)
+  aggregate(dispatch, gigahorse, hammock, http4s, httpc, play, roshttp, scalaj, shaka, spray)
 
 lazy val dispatch =
   (project in file("dispatch"))
@@ -109,4 +109,17 @@ lazy val `fs2-http` =
       )
     )
 
+lazy val hammock =
+  (project in file("hammock"))
+    .settings(
+      resolvers += Resolver.jcenterRepo,
+      scalaVersion := "2.11.8",
+      libraryDependencies ++= Seq(
+        "com.pepegar" %% "hammock-core" % "0.1",
+        "com.pepegar" %% "hammock-circe" % "0.1"
+      )
+    )
+
 reformatOnCompileSettings
+
+

@@ -11,7 +11,7 @@ import spinoco.protocol.http.header.value.AgentVersion
 import spinoco.protocol.http.header._
 import spinoco.protocol.http.header.value.MediaType
 
-object Fs2Http extends App {
+object Fs2Http {
 
   // TO BE REMOVED AFTER UPGRADE TO 0.1.4 - BEGIN
   import java.nio.channels.AsynchronousChannelGroup

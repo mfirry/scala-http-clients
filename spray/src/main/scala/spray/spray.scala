@@ -7,7 +7,7 @@ import spray.http._
 import spray.client.pipelining._
 import akka.actor.ActorSystem
 
-object sprayExample extends App {
+object sprayExample {
 
   import system.dispatcher // execution context for futures
   implicit val system = ActorSystem()
