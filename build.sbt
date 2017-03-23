@@ -58,7 +58,7 @@ lazy val play =
     .settings(
       scalaVersion := "2.11.8",
       libraryDependencies ++= Seq(
-         "com.typesafe.play" %% "play-ws" % "2.4.6"
+         "com.typesafe.play" %% "play-ws" % "2.4.10"
       )
     )
 
@@ -93,6 +93,7 @@ lazy val shaka =
 lazy val spray =
   (project in file("spray"))
     .settings(
+      scalaVersion := "2.11.8",
       libraryDependencies ++= Seq(
         "com.typesafe.akka" % "akka-actor_2.11" % "2.3.4",
         "io.spray" % "spray-client_2.11" % "1.3.4"
