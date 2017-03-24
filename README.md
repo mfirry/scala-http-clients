@@ -6,6 +6,7 @@ Totally a WIP (like all my other projects).
 - [Featherbed](https://github.com/finagle/featherbed)
 - [Gigahorse](https://github.com/eed3si9n/gigahorse)
 - [http4s](https://github.com/http4s/http4s)
+- [hammock](https://github.com/pepegar/hammock)
 - [scala-httpc](https://github.com/amrhassan/scala-httpc)
 - [Play](https://www.playframework.com/documentation/2.5.x/ScalaWS)
 - [RösHTTP](https://github.com/hmil/RosHTTP)
