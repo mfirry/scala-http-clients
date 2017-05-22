@@ -120,6 +120,13 @@ lazy val hammock =
       )
     )
 
+lazy val `lolhttp` =
+  (project in file("lolhttp"))
+    .settings(
+      scalaVersion := "2.11.8",
+      libraryDependencies ++= Seq(
+        "com.criteo.lolhttp" %% "lolhttp" % "0.4.0"
+      )
+    )
+
 reformatOnCompileSettings
-
-
