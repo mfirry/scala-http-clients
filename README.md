@@ -14,5 +14,6 @@ Totally a WIP (like all my other projects).
 - [naive-http](https://github.com/timt/naive-http)
 - [Spray](http://spray.io/documentation/1.2.4/spray-client/)
 - [fs2-http](https://github.com/Spinoco/fs2-http)
+- [lolhttp](https://github.com/criteo/lolhttp)
 
 [![Build Status](https://travis-ci.org/mfirry/scala-http-clients.png?branch=master)](https://travis-ci.org/mfirry/scala-http-clients)
