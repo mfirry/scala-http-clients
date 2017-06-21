@@ -11,7 +11,7 @@ import spinoco.protocol.http.header.value.AgentVersion
 import spinoco.protocol.http.header._
 import spinoco.protocol.http.header.value.MediaType
 
-object Fs2Http {
+object Fs2Http extends App {
 
   // TO BE REMOVED AFTER UPGRADE TO 0.1.4 - BEGIN
   import java.nio.channels.AsynchronousChannelGroup
@@ -28,13 +28,13 @@ object Fs2Http {
   val task = http.client[Task]().flatMap { client =>
 
     val request = HttpRequest
-      .get[Task](Uri.https("github.com", "/scala-italy"))
-      // .get[Task](Uri.https("api.github.com", "/users/scala-italy"))
-      // .withHeader(Accept(List(HttpMediaRange.One(MediaType.`application/json`, None))))
+      // .get[Task](Uri.https("github.com", "/scala-italy"))
+      .get[Task](Uri.https("api.github.com", "/users/scala-italy"))
+      .withHeader(Accept(List(HttpMediaRange.One(MediaType.`application/json`, None))))
       .withHeader(`User-Agent`(AgentVersion("Awesome-Octocat-App")))
 
     client.request(request).flatMap { resp =>
-      Stream.eval(resp.bodyAsString)
+      Stream.eval(resp.withUtf8Body)
     }.runLog.map {
       println
     }

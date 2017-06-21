@@ -10,7 +10,7 @@ lazy val dispatch =
     .settings(
       scalaVersion := "2.11.8",
       libraryDependencies ++= Seq(
-        "net.databinder.dispatch" %% "dispatch-core" % "0.11.2"
+        "net.databinder.dispatch" %% "dispatch-core" % "0.13.0"
       )
     )
 
@@ -105,7 +105,7 @@ lazy val `fs2-http` =
     .settings(
       scalaVersion := "2.11.8",
       libraryDependencies ++= Seq(
-        "com.spinoco" %% "fs2-http" % "0.1.3"
+        "com.spinoco" %% "fs2-http" % "0.1.7"
       )
     )
 
