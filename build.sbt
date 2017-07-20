@@ -129,4 +129,14 @@ lazy val `lolhttp` =
       )
     )
 
+lazy val sttp =
+  (project in file("sttp"))
+    .settings(
+      scalaVersion := "2.11.8",
+      libraryDependencies ++= Seq(
+        "com.softwaremill.sttp" %% "core" % "0.0.1"
+      )
+    )
+
+
 reformatOnCompileSettings
