@@ -3,14 +3,14 @@ name := """scala-http-clients"""
 version := "0.1.1"
 
 lazy val root = project.in(file(".")).
-  aggregate(dispatch, gigahorse, hammock, http4s, httpc, play, roshttp, scalaj, shaka, spray)
+  aggregate(dispatch, gigahorse, hammock, http4s, httpc, play, roshttp, scalaj, shaka, spray, sttp)
 
 lazy val dispatch =
   (project in file("dispatch"))
     .settings(
       scalaVersion := "2.11.8",
       libraryDependencies ++= Seq(
-        "net.databinder.dispatch" %% "dispatch-core" % "0.13.0"
+        "net.databinder.dispatch" %% "dispatch-core" % "0.13.2"
       )
     )
 
@@ -134,7 +134,7 @@ lazy val sttp =
     .settings(
       scalaVersion := "2.11.8",
       libraryDependencies ++= Seq(
-        "com.softwaremill.sttp" %% "core" % "0.0.1"
+        "com.softwaremill.sttp" %% "core" % "1.0.5"
       )
     )
 
