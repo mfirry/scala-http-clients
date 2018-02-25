@@ -2,7 +2,8 @@ package com.example
 
 import scala.concurrent._
 import scala.concurrent.duration._
-import gigahorse.Gigahorse
+import gigahorse._
+import gigahorse.support.asynchttpclient.Gigahorse
 import gigahorse.HeaderNames
 
 // https://github.com/eed3si9n/gigahorse
@@ -18,7 +19,7 @@ object GigahorseClient {
         )
       val f = http.run(r)
       val res = Await.result(f, 120.seconds)
-      println(res.body)
+      println(res.bodyAsString)
     }
   }
 }
