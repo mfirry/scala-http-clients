@@ -30,15 +30,15 @@ lazy val gigahorse =
       )
     )
 
-// lazy val http4s =
-//   (project in file("http4s"))
-//     .settings(
-//       scalaVersion := "2.12.4",
-//       libraryDependencies ++= Seq(
-//         "org.http4s" %% "http4s-dsl" % "0.18.0",
-//         "org.http4s" %% "http4s-blaze-client" % "0.18.0"
-//       )
-//     )
+lazy val http4s =
+  (project in file("http4s"))
+    .settings(
+      scalaVersion := "2.12.4",
+      libraryDependencies ++= Seq(
+        "org.http4s" %% "http4s-dsl" % "0.18.0",
+        "org.http4s" %% "http4s-blaze-client" % "0.18.0"
+      )
+    )
 
 // lazy val featherbed =
 //   (project in file("featherbed"))
@@ -99,25 +99,25 @@ lazy val shaka =
 //       )
 //     )
 
-lazy val `fs2-http` =
-  (project in file("fs2-http"))
-    .settings(
-      scalaVersion := "2.12.4",
-      libraryDependencies ++= Seq(
-        "com.spinoco" %% "fs2-http" % "0.1.7"
-      )
-    )
-
-// lazy val hammock =
-//   (project in file("hammock"))
+// lazy val `fs2-http` =
+//   (project in file("fs2-http"))
 //     .settings(
-//       resolvers += Resolver.jcenterRepo,
 //       scalaVersion := "2.12.4",
 //       libraryDependencies ++= Seq(
-//         "com.pepegar" %% "hammock-core" % "0.8.2",
-//         "com.pepegar" %% "hammock-circe" % "0.8.2"
+//         "com.spinoco" %% "fs2-http" % "0.1.7"
 //       )
 //     )
+
+lazy val hammock =
+  (project in file("hammock"))
+    .settings(
+      resolvers += Resolver.jcenterRepo,
+      scalaVersion := "2.12.4",
+      libraryDependencies ++= Seq(
+        "com.pepegar" %% "hammock-core" % "0.8.1",
+        "com.pepegar" %% "hammock-circe" % "0.8.1"
+      )
+    )
 
 lazy val `lolhttp` =
   (project in file("lolhttp"))
@@ -138,7 +138,7 @@ lazy val sttp =
     )
 
 lazy val root = project.in(file(".")).
-  aggregate(gigahorse, httpc, scalaj, shaka, sttp, dispatch, play)
+  aggregate(gigahorse, httpc, scalaj, shaka, sttp, dispatch, play, hammock)
 
 
 // reformatOnCompileSettings
