@@ -137,6 +137,15 @@ lazy val sttp =
       )
     )
 
+lazy val requests =
+    (project in file("requests-scala"))
+      .settings(
+        scalaVersion := "2.12.4",
+          libraryDependencies ++= Seq(
+              "com.lihaoyi" %% "requests" % "0.1.2"
+          )
+        )
+
 lazy val root = project.in(file(".")).
   aggregate(gigahorse, httpc, scalaj, shaka, sttp, dispatch, play, hammock)
 
