@@ -66,7 +66,7 @@ lazy val scalaj =
     .settings(
       scalaVersion := "2.12.4",
       libraryDependencies ++= Seq(
-         "org.scalaj" %% "scalaj-http" % "2.3.0"
+         "org.scalaj" %% "scalaj-http" % "2.4.1"
       )
     )
 
