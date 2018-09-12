@@ -133,7 +133,7 @@ lazy val sttp =
     .settings(
       scalaVersion := "2.12.4",
       libraryDependencies ++= Seq(
-        "com.softwaremill.sttp" %% "core" % "1.0.5"
+        "com.softwaremill.sttp" %% "core" % "1.0.6"
       )
     )
 
