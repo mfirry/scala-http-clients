@@ -84,7 +84,7 @@ lazy val shaka =
     .settings(
       scalaVersion := "2.12.4",
       libraryDependencies ++= Seq(
-         "io.shaka" %% "naive-http" % "98"
+         "io.shaka" %% "naive-http" % "99"
       ),
       resolvers += "Tim Tennant's repo" at "http://dl.bintray.com/timt/repo/"
     )
