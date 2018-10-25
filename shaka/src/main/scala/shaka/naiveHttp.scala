@@ -5,7 +5,7 @@ import io.shaka.http.Request.{GET, POST}
 import io.shaka.http.HttpHeader.USER_AGENT
 
 // https://github.com/timt/naive-http
-object naiveHttp {
+object naiveHttp extends App {
 
   val response = http(
       GET("https://api.github.com/users/scala-italy").header(
