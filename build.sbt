@@ -79,8 +79,8 @@ lazy val scalaj =
 //       )
 //     )
 
-lazy val shaka =
-  (project in file("shaka"))
+lazy val `naive-http` =
+  (project in file("naive-http"))
     .settings(
       scalaVersion := "2.12.4",
       libraryDependencies ++= Seq(
@@ -88,16 +88,6 @@ lazy val shaka =
       ),
       resolvers += "Tim Tennant's repo" at "http://dl.bintray.com/timt/repo/"
     )
-
-// lazy val spray =
-//   (project in file("spray"))
-//     .settings(
-//       scalaVersion := "2.12.4",
-//       libraryDependencies ++= Seq(
-//         "com.typesafe.akka" % "akka-actor_2.11" % "2.3.4",
-//         "io.spray" % "spray-client_2.11" % "1.3.4"
-//       )
-//     )
 
 // lazy val `fs2-http` =
 //   (project in file("fs2-http"))

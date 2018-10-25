@@ -12,7 +12,6 @@ Totally a WIP (like all my other projects).
 - [RösHTTP](https://github.com/hmil/RosHTTP)
 - [Simplified Http](https://github.com/scalaj/scalaj-http)
 - [naive-http](https://github.com/timt/naive-http)
-- [Spray](http://spray.io/documentation/1.2.4/spray-client/)
 - [fs2-http](https://github.com/Spinoco/fs2-http)
 - [lolhttp](https://github.com/criteo/lolhttp)
 - [sttp](https://github.com/softwaremill/sttp)
