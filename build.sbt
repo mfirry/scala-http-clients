@@ -2,14 +2,14 @@ name := """scala-http-clients"""
 
 version := "0.1.1"
 
-val scalaV = "2.12.7" 
+val scalaV = "2.12.7"
 
 lazy val dispatch =
   (project in file("dispatch"))
     .settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
-        "org.dispatchhttp" %% "dispatch-core" % "1.0.0"
+        "org.dispatchhttp" %% "dispatch-core" % "1.0.1"
       )
     )
 
