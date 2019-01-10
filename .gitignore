@@ -6,3 +6,5 @@
 **/target
 .idea/
 .metals/
+.bloop/
+ project/.bloop/
