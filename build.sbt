@@ -106,8 +106,8 @@ lazy val hammock =
       resolvers += Resolver.jcenterRepo,
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
-        "com.pepegar" %% "hammock-core" % "0.8.7",
-        "com.pepegar" %% "hammock-circe" % "0.8.7"
+        "com.pepegar" %% "hammock-core" % "0.9.0",
+        "com.pepegar" %% "hammock-circe" % "0.9.0"
       )
     )
 
