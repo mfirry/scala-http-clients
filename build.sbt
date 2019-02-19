@@ -107,6 +107,7 @@ lazy val hammock =
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
         "com.pepegar" %% "hammock-core" % "0.9.0",
+        "com.pepegar" %% "hammock-apache-http" % "0.9.0",
         "com.pepegar" %% "hammock-circe" % "0.9.0"
       )
     )
