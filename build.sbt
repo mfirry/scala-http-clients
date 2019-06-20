@@ -58,8 +58,8 @@ lazy val http4s =
      .settings(
        scalaVersion := scalaV,
        libraryDependencies ++= Seq(
-          "com.typesafe.play" %% "play-ahc-ws-standalone" % "1.1.10",
-          "com.typesafe.play" %% "play-ws-standalone-json" % "1.1.10"
+          "com.typesafe.play" %% "play-ahc-ws-standalone" % "1.1.13",
+          "com.typesafe.play" %% "play-ws-standalone-json" % "1.1.13"
        )
      )
 
