@@ -1,26 +1,26 @@
 name := """scala-http-clients"""
 
-version := "0.1.1"
+version := "1.2.13.0"
 
-val scalaV = "2.12.8"
+val scalaV = "2.13.0"
 
-lazy val dispatch =
-  (project in file("dispatch"))
-    .settings(
-      scalaVersion := scalaV,
-      libraryDependencies ++= Seq(
-        "org.dispatchhttp" %% "dispatch-core" % "1.0.1"
-      )
-    )
+// lazy val dispatch =
+//   (project in file("dispatch"))
+//     .settings(
+//       scalaVersion := scalaV,
+//       libraryDependencies ++= Seq(
+//         "org.dispatchhttp" %% "dispatch-core" % "1.0.1"
+//       )
+//     )
 
-lazy val httpc =
-  (project in file("httpc"))
-    .settings(
-      scalaVersion := scalaV,
-      libraryDependencies ++= Seq(
-        "io.github.amrhassan" %% "httpc" % "0.3.2"
-      )
-    )
+// lazy val httpc =
+//   (project in file("httpc"))
+//     .settings(
+//       scalaVersion := scalaV,
+//       libraryDependencies ++= Seq(
+//         "io.github.amrhassan" %% "httpc" % "0.3.2"
+//       )
+//     )
 
 lazy val gigahorse =
   (project in file("gigahorse"))
@@ -58,8 +58,8 @@ lazy val http4s =
      .settings(
        scalaVersion := scalaV,
        libraryDependencies ++= Seq(
-          "com.typesafe.play" %% "play-ahc-ws-standalone" % "1.1.10",
-          "com.typesafe.play" %% "play-ws-standalone-json" % "1.1.10"
+          "com.typesafe.play" %% "play-ahc-ws-standalone" % "2.1.0-M3",
+          "com.typesafe.play" %% "play-ws-standalone-json" % "2.1.0-M3"
        )
      )
 
@@ -68,7 +68,7 @@ lazy val scalaj =
     .settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
-         "org.scalaj" %% "scalaj-http" % "2.4.1"
+         "org.scalaj" %% "scalaj-http" % "2.4.2"
       )
     )
 
@@ -81,15 +81,15 @@ lazy val scalaj =
 //       )
 //     )
 
-lazy val `naive-http` =
-  (project in file("naive-http"))
-    .settings(
-      scalaVersion := scalaV,
-      libraryDependencies ++= Seq(
-         "io.shaka" %% "naive-http" % "104"
-      ),
-      resolvers += "Tim Tennant's repo" at "http://dl.bintray.com/timt/repo/"
-    )
+// lazy val `naive-http` =
+//   (project in file("naive-http"))
+//     .settings(
+//       scalaVersion := scalaV,
+//       libraryDependencies ++= Seq(
+//          "io.shaka" %% "naive-http" % "104"
+//       ),
+//       resolvers += "Tim Tennant's repo" at "http://dl.bintray.com/timt/repo/"
+//     )
 
 // lazy val `fs2-http` =
 //   (project in file("fs2-http"))
@@ -100,17 +100,17 @@ lazy val `naive-http` =
 //       )
 //     )
 
-lazy val hammock =
-  (project in file("hammock"))
-    .settings(
-      resolvers += Resolver.jcenterRepo,
-      scalaVersion := scalaV,
-      libraryDependencies ++= Seq(
-        "com.pepegar" %% "hammock-core" % "0.9.0",
-        "com.pepegar" %% "hammock-apache-http" % "0.9.0",
-        "com.pepegar" %% "hammock-circe" % "0.9.0"
-      )
-    )
+// lazy val hammock =
+//   (project in file("hammock"))
+//     .settings(
+//       resolvers += Resolver.jcenterRepo,
+//       scalaVersion := scalaV,
+//       libraryDependencies ++= Seq(
+//         "com.pepegar" %% "hammock-core" % "0.9.0",
+//         "com.pepegar" %% "hammock-apache-http" % "0.9.0",
+//         "com.pepegar" %% "hammock-circe" % "0.9.0"
+//       )
+//     )
 
 lazy val `lolhttp` =
   (project in file("lolhttp"))
@@ -126,7 +126,7 @@ lazy val sttp =
     .settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
-        "com.softwaremill.sttp" %% "core" % "1.5.16"
+        "com.softwaremill.sttp" %% "core" % "1.6.0"
       )
     )
 
@@ -140,7 +140,7 @@ lazy val requests =
         )
 
 lazy val root = project.in(file(".")).
-  aggregate(gigahorse, httpc, scalaj, `naive-http`, sttp, dispatch, play, hammock)
+  aggregate(gigahorse, scalaj, sttp, play)
 
 
 // reformatOnCompileSettings

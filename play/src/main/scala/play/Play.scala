@@ -1,5 +1,7 @@
 package com.example
 
+import scala.language.postfixOps
+
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.{Await, Future}
 import scala.concurrent.duration._
