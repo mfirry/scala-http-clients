@@ -4,14 +4,14 @@ version := "1.2.13.0"
 
 val scalaV = "2.13.0"
 
-// lazy val dispatch =
-//   (project in file("dispatch"))
-//     .settings(
-//       scalaVersion := scalaV,
-//       libraryDependencies ++= Seq(
-//         "org.dispatchhttp" %% "dispatch-core" % "1.0.1"
-//       )
-//     )
+lazy val dispatch =
+  (project in file("dispatch"))
+    .settings(
+      scalaVersion := scalaV,
+      libraryDependencies ++= Seq(
+        "org.dispatchhttp" %% "dispatch-core" % "1.1.0"
+      )
+    )
 
 // lazy val httpc =
 //   (project in file("httpc"))

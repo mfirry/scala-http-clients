@@ -1,5 +1,7 @@
 package com.example
 
+import scala.language.postfixOps
+
 import dispatch._, Defaults._
 
 import scala.concurrent.{Await, Future}
