@@ -135,12 +135,12 @@ lazy val requests =
       .settings(
         scalaVersion := scalaV,
           libraryDependencies ++= Seq(
-              "com.lihaoyi" %% "requests" % "0.1.2"
+              "com.lihaoyi" %% "requests" % "0.5.1"
           )
         )
 
 lazy val root = project.in(file(".")).
-  aggregate(gigahorse, scalaj, sttp, play)
+  aggregate(gigahorse, scalaj, sttp, play, requests)
 
 
 // reformatOnCompileSettings
