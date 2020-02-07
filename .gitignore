@@ -7,5 +7,5 @@
 .idea/
 .metals/
 .bloop/
- project/.bloop/
- project/metals.sbt
+project/.bloop/
+project/metals.sbt
