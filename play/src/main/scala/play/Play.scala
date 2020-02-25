@@ -14,7 +14,7 @@ object Play {
 
   def main(args: Array[String]): Unit = {
     val ahcConfig = new AhcConfigBuilder().build()
-    val w =  new DefaultAsyncHttpClient(ahcConfig)
+    val w = new DefaultAsyncHttpClient(ahcConfig)
     val url = "https://api.github.com/users/scala-italy"
     val ws = new StandaloneAhcWSClient(w)(null)
     val res =

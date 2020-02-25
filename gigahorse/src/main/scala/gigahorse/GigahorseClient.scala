@@ -15,7 +15,7 @@ object GigahorseClient {
         .url("https://api.github.com/users/scala-italy")
         .get
         .addHeaders(
-            HeaderNames.USER_AGENT -> "Awesome-Octocat-App"
+          HeaderNames.USER_AGENT -> "Awesome-Octocat-App"
         )
       val f = http.run(r)
       val res = Await.result(f, 120.seconds)
