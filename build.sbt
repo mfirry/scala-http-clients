@@ -2,14 +2,14 @@ name := """scala-http-clients"""
 
 version := "1.2.13.0"
 
-val scalaV = "2.13.3  "
+val scalaV = "2.13.3"
 
 lazy val dispatch =
   (project in file("dispatch"))
     .settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
-        "org.dispatchhttp" %% "dispatch-core" % "1.1.0"
+        "org.dispatchhttp" %% "dispatch-core" % "1.2.0"
       )
     )
 
@@ -28,8 +28,8 @@ lazy val http4s =
     .settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
-        "org.http4s" %% "http4s-dsl" % "0.18.0",
-        "org.http4s" %% "http4s-blaze-client" % "0.18.0"
+        "org.http4s" %% "http4s-dsl" % "0.21.8",
+        "org.http4s" %% "http4s-blaze-client" % "0.21.8"
       )
     )
 
@@ -99,7 +99,7 @@ lazy val requests =
         )
 
 lazy val root = project.in(file(".")).
-  aggregate(gigahorse, scalaj, sttp, play, requests)
+  aggregate(gigahorse, scalaj, sttp, play, requests, http4s)
 
 
 // reformatOnCompileSettings

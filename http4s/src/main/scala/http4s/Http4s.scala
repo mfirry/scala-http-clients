@@ -1,21 +1,30 @@
 package com.example
+
+import java.util.concurrent._
+
 import cats.effect._
+import cats.effect.Blocker
+
+import org.http4s.{Header, Http, Request, Response, Uri}
+import org.http4s.Method.GET
 import org.http4s._
-import org.http4s.client.blaze.Http1Client
-import org.http4s.client.dsl.Http4sClientDsl
-import org.http4s.dsl.io._
+import org.http4s.client._
+import org.http4s.implicits._
 
 // http://http4s.org/
-object Http4s extends App with Http4sClientDsl[IO] {
+object Http4s extends cats.effect.IOApp {
 
-    val h = Header("User-Agent", "Awesome-Octocat-App")
-    val client = Http1Client[IO]()
+  def run(args: List[String]): IO[ExitCode] = {
+    val blockingPool = Executors.newFixedThreadPool(5)
+    val blocker = Blocker.liftExecutorService(blockingPool)
+    val httpClient: Client[IO] = JavaNetClientBuilder[IO](blocker).create
 
-    // there might be a better way to build a Task[Request]
-    val req = GET(uri("https://api.github.com/users/scala-italy"))
+    val uri = uri"https://api.github.com/users/scala-italy"
 
-    // we're blocking on purpose
-    val responseBody = Http1Client[IO]().flatMap(_.expect[String](req))
-    println(responseBody.unsafeRunSync())
+    httpClient.expect[String](Request[IO](method = GET, uri = uri)
+      .withHeaders(Header("User-Agent", "Awesome-Octocat-App")))
+      .as(ExitCode.Success)
+
+  }
 
 }
