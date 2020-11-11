@@ -3,7 +3,6 @@ Raise your hand if you need a scala http client.
 Totally a WIP (like all my other projects).
 
 - [Dispatch](https://github.com/dispatch/reboot)
-- [Featherbed](https://github.com/finagle/featherbed)
 - [Gigahorse](https://github.com/eed3si9n/gigahorse)
 - [http4s](https://github.com/http4s/http4s)
 - [hammock](https://github.com/pepegar/hammock)
