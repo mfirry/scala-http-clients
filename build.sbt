@@ -2,7 +2,7 @@ name := """scala-http-clients"""
 
 version := "1.2.13.0"
 
-val scalaV = "2.13.1"
+val scalaV = "2.13.3"
 
 lazy val dispatch =
   (project in file("dispatch"))
@@ -12,15 +12,6 @@ lazy val dispatch =
         "org.dispatchhttp" %% "dispatch-core" % "1.1.0"
       )
     )
-
-// lazy val httpc =
-//   (project in file("httpc"))
-//     .settings(
-//       scalaVersion := scalaV,
-//       libraryDependencies ++= Seq(
-//         "io.github.amrhassan" %% "httpc" % "0.3.2"
-//       )
-//     )
 
 lazy val gigahorse =
   (project in file("gigahorse"))
@@ -42,17 +33,6 @@ lazy val http4s =
       )
     )
 
-// lazy val featherbed =
-//   (project in file("featherbed"))
-//     .settings(
-//       scalaVersion := scalaV,
-//       libraryDependencies ++= Seq(
-//         "io.github.finagle" %% "featherbed-core" % "0.2.1-SNAPSHOT" exclude("io.netty", "netty"),
-//         "io.github.finagle" %% "featherbed-circe" % "0.2.1-SNAPSHOT"
-//       ),
-//       resolvers += Resolver.sonatypeRepo("snapshots")
-//     )
-
  lazy val play =
    (project in file("play"))
      .settings(
@@ -71,15 +51,6 @@ lazy val scalaj =
          "org.scalaj" %% "scalaj-http" % "2.4.2"
       )
     )
-
-// lazy val roshttp =
-//   (project in file("roshttp"))
-//     .settings(
-//       scalaVersion := scalaV,
-//       libraryDependencies ++= Seq(
-//          "fr.hmil" %% "roshttp" % "2.1.0"
-//       )
-//     )
 
 // lazy val `naive-http` =
 //   (project in file("naive-http"))
