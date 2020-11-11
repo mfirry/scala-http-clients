@@ -9,6 +9,5 @@ Totally a WIP (like all my other projects).
 - [Simplified Http](https://github.com/scalaj/scalaj-http)
 - [naive-http](https://github.com/timt/naive-http)
 - [fs2-http](https://github.com/Spinoco/fs2-http)
-- [lolhttp](https://github.com/criteo/lolhttp)
 - [sttp](https://github.com/softwaremill/sttp)
 - [requests-scala](https://github.com/lihaoyi/requests-scala)

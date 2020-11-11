@@ -28,8 +28,8 @@ lazy val http4s =
     .settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
-        "org.http4s" %% "http4s-dsl" % "0.21.8",
-        "org.http4s" %% "http4s-blaze-client" % "0.21.8"
+        "org.http4s" %% "http4s-dsl" % "0.21.9",
+        "org.http4s" %% "http4s-blaze-client" % "0.21.9"
       )
     )
 
@@ -52,15 +52,15 @@ lazy val scalaj =
       )
     )
 
-// lazy val `naive-http` =
-//   (project in file("naive-http"))
-//     .settings(
-//       scalaVersion := scalaV,
-//       libraryDependencies ++= Seq(
-//          "io.shaka" %% "naive-http" % "104"
-//       ),
-//       resolvers += "Tim Tennant's repo" at "http://dl.bintray.com/timt/repo/"
-//     )
+lazy val `naive-http` =
+  (project in file("naive-http"))
+    .settings(
+      scalaVersion := scalaV,
+      libraryDependencies ++= Seq(
+         "io.shaka" %% "naive-http" % "114"
+      ),
+      resolvers += ("Tim Tennant's repo" at "http://dl.bintray.com/timt/repo/").withAllowInsecureProtocol(true)
+    )
 
 // lazy val `fs2-http` =
 //   (project in file("fs2-http"))
@@ -70,15 +70,6 @@ lazy val scalaj =
 //         "com.spinoco" %% "fs2-http" % "0.4.0"
 //       )
 //     )
-
-lazy val `lolhttp` =
-  (project in file("lolhttp"))
-    .settings(
-      scalaVersion := scalaV,
-      libraryDependencies ++= Seq(
-        "com.criteo.lolhttp" %% "lolhttp" % "0.4.0"
-      )
-    )
 
 lazy val sttp =
   (project in file("sttp"))
@@ -99,7 +90,7 @@ lazy val requests =
         )
 
 lazy val root = project.in(file(".")).
-  aggregate(gigahorse, scalaj, sttp, play, requests, http4s)
+  aggregate(gigahorse, scalaj, sttp, play, requests, http4s, `naive-http`)
 
 
 // reformatOnCompileSettings
