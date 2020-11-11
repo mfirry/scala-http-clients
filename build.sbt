@@ -2,7 +2,7 @@ name := """scala-http-clients"""
 
 version := "1.2.13.0"
 
-val scalaV = "2.13.3"
+val scalaV = "2.13.3  "
 
 lazy val dispatch =
   (project in file("dispatch"))
@@ -68,18 +68,6 @@ lazy val scalaj =
 //       scalaVersion := scalaV,
 //       libraryDependencies ++= Seq(
 //         "com.spinoco" %% "fs2-http" % "0.4.0"
-//       )
-//     )
-
-// lazy val hammock =
-//   (project in file("hammock"))
-//     .settings(
-//       resolvers += Resolver.jcenterRepo,
-//       scalaVersion := scalaV,
-//       libraryDependencies ++= Seq(
-//         "com.pepegar" %% "hammock-core" % "0.9.0",
-//         "com.pepegar" %% "hammock-apache-http" % "0.9.0",
-//         "com.pepegar" %% "hammock-circe" % "0.9.0"
 //       )
 //     )
 
