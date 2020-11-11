@@ -5,7 +5,6 @@ Totally a WIP (like all my other projects).
 - [Dispatch](https://github.com/dispatch/reboot)
 - [Gigahorse](https://github.com/eed3si9n/gigahorse)
 - [http4s](https://github.com/http4s/http4s)
-- [hammock](https://github.com/pepegar/hammock)
 - [Play](https://www.playframework.com/documentation/2.5.x/ScalaWS)
 - [Simplified Http](https://github.com/scalaj/scalaj-http)
 - [naive-http](https://github.com/timt/naive-http)
