@@ -2,7 +2,7 @@ name := """scala-http-clients"""
 
 version := "1.2.13.0"
 
-val scalaV = "2.13.3"
+val scalaV = "2.13.4"
 
 lazy val dispatch =
   (project in file("dispatch"))
