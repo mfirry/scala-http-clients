@@ -8,8 +8,9 @@ import io.shaka.http.HttpHeader.USER_AGENT
 object naiveHttp extends App {
 
   val response = http(
-      GET("https://api.github.com/users/scala-italy").header(
-          USER_AGENT, "Awesome-Octocat-App"))
+    GET("https://api.github.com/users/scala-italy")
+      .header(USER_AGENT, "Awesome-Octocat-App")
+  )
 
   println(response.entityAsString)
 }

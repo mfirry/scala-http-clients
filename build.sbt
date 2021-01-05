@@ -2,6 +2,8 @@ name := """scala-http-clients"""
 
 version := "1.2.13.0"
 
+ThisBuild / scalafmtOnCompile := true
+
 val scalaV = "2.13.4"
 
 lazy val dispatch =
