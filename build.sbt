@@ -62,15 +62,6 @@ lazy val `naive-http` =
       resolvers += ("Tim Tennant's repo" at "http://dl.bintray.com/timt/repo/").withAllowInsecureProtocol(true)
     )
 
-// lazy val `fs2-http` =
-//   (project in file("fs2-http"))
-//     .settings(
-//       scalaVersion := scalaV,
-//       libraryDependencies ++= Seq(
-//         "com.spinoco" %% "fs2-http" % "0.4.0"
-//       )
-//     )
-
 lazy val sttp =
   (project in file("sttp"))
     .settings(
@@ -90,7 +81,5 @@ lazy val requests =
         )
 
 lazy val root = project.in(file(".")).
-  aggregate(gigahorse, scalaj, sttp, play, requests, http4s, `naive-http`)
+  aggregate(gigahorse, scalaj, sttp, play, requests, http4s, `naive-http`, dispatch)
 
-
-// reformatOnCompileSettings
