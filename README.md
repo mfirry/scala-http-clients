@@ -1,3 +1,5 @@
+![Scala CI](https://github.com/mfirry/scala-http-clients/workflows/Scala%20CI/badge.svg)
+
 Raise your hand if you need a scala http client.
 
 Totally a WIP (like all my other projects).
