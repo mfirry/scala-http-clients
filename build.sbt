@@ -59,7 +59,7 @@ lazy val `naive-http` =
     .settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
-         "io.shaka" %% "naive-http" % "114"
+         "io.shaka" %% "naive-http" % "121"
       ),
       resolvers += ("Tim Tennant's repo" at "http://dl.bintray.com/timt/repo/").withAllowInsecureProtocol(true)
     )
