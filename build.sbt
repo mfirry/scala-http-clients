@@ -35,22 +35,22 @@ lazy val http4s =
       )
     )
 
- lazy val play =
-   (project in file("play"))
-     .settings(
-       scalaVersion := scalaV,
-       libraryDependencies ++= Seq(
-          "com.typesafe.play" %% "play-ahc-ws-standalone" % "2.1.2",
-          "com.typesafe.play" %% "play-ws-standalone-json" % "2.1.2"
-       )
-     )
+lazy val play =
+  (project in file("play"))
+    .settings(
+      scalaVersion := scalaV,
+      libraryDependencies ++= Seq(
+        "com.typesafe.play" %% "play-ahc-ws-standalone" % "2.1.2",
+        "com.typesafe.play" %% "play-ws-standalone-json" % "2.1.2"
+      )
+    )
 
 lazy val scalaj =
   (project in file("scalaj"))
     .settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
-         "org.scalaj" %% "scalaj-http" % "2.4.2"
+        "org.scalaj" %% "scalaj-http" % "2.4.2"
       )
     )
 
@@ -59,9 +59,10 @@ lazy val `naive-http` =
     .settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
-         "io.shaka" %% "naive-http" % "122"
+        "io.shaka" %% "naive-http" % "122"
       ),
-      resolvers += ("Tim Tennant's repo" at "http://dl.bintray.com/timt/repo/").withAllowInsecureProtocol(true)
+      resolvers += ("Tim Tennant's repo" at "http://dl.bintray.com/timt/repo/")
+        .withAllowInsecureProtocol(true)
     )
 
 lazy val sttp =
@@ -74,14 +75,23 @@ lazy val sttp =
     )
 
 lazy val requests =
-    (project in file("requests-scala"))
-      .settings(
-        scalaVersion := scalaV,
-          libraryDependencies ++= Seq(
-              "com.lihaoyi" %% "requests" % "0.6.9"
-          )
-        )
+  (project in file("requests-scala"))
+    .settings(
+      scalaVersion := scalaV,
+      libraryDependencies ++= Seq(
+        "com.lihaoyi" %% "requests" % "0.6.9"
+      )
+    )
 
-lazy val root = project.in(file(".")).
-  aggregate(gigahorse, scalaj, sttp, play, requests, http4s, `naive-http`, dispatch)
-
+lazy val root = project
+  .in(file("."))
+  .aggregate(
+    gigahorse,
+    scalaj,
+    sttp,
+    play,
+    requests,
+    http4s,
+    `naive-http`,
+    dispatch
+  )
