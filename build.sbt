@@ -30,8 +30,8 @@ lazy val http4s =
     .settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
-        "org.http4s" %% "http4s-dsl" % "0.21.26",
-        "org.http4s" %% "http4s-blaze-client" % "0.21.26"
+        "org.http4s" %% "http4s-dsl" % "0.21.29",
+        "org.http4s" %% "http4s-blaze-client" % "0.21.29"
       )
     )
 
