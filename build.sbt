@@ -1,6 +1,6 @@
 name := """scala-http-clients"""
 
-version := "1.2.13.0"
+version := "1.2.13.7"
 
 ThisBuild / scalafmtOnCompile := true
 
@@ -86,12 +86,12 @@ lazy val requests =
 lazy val root = project
   .in(file("."))
   .aggregate(
+    dispatch,
     gigahorse,
-    scalaj,
-    sttp,
+    http4s,
+    `naive-http`
     play,
     requests,
-    http4s,
-    `naive-http`,
-    dispatch
+    scalaj,
+    sttp
   )
