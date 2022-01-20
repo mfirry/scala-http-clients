@@ -4,7 +4,7 @@ version := "1.2.13.7"
 
 ThisBuild / scalafmtOnCompile := true
 
-val scalaV = "2.13.7"
+val scalaV = "2.13.8"
 
 lazy val dispatch =
   (project in file("dispatch"))
@@ -30,8 +30,8 @@ lazy val http4s =
     .settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
-        "org.http4s" %% "http4s-dsl" % "0.23.4",
-        "org.http4s" %% "http4s-blaze-client" % "0.23.4"
+        "org.http4s" %% "http4s-dsl" % "0.23.6",
+        "org.http4s" %% "http4s-blaze-client" % "0.23.6"
       )
     )
 
@@ -40,8 +40,8 @@ lazy val play =
     .settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
-        "com.typesafe.play" %% "play-ahc-ws-standalone" % "2.1.2",
-        "com.typesafe.play" %% "play-ws-standalone-json" % "2.1.2"
+        "com.typesafe.play" %% "play-ahc-ws-standalone" % "2.1.3",
+        "com.typesafe.play" %% "play-ws-standalone-json" % "2.1.3"
       )
     )
 
@@ -70,7 +70,7 @@ lazy val sttp =
     .settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
-        "com.softwaremill.sttp.client3" %% "core" % "3.1.1"
+        "com.softwaremill.sttp.client3" %% "core" % "3.3.16"
       )
     )
 
@@ -89,7 +89,7 @@ lazy val root = project
     dispatch,
     gigahorse,
     http4s,
-    `naive-http`
+    `naive-http`,
     play,
     requests,
     scalaj,
