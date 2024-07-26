@@ -4,7 +4,7 @@ version := "1.2.13.7"
 
 ThisBuild / scalafmtOnCompile := true
 
-val scalaV = "2.13.8"
+val scalaV = "2.13.14"
 
 lazy val dispatch =
   (project in file("dispatch"))
@@ -59,7 +59,7 @@ lazy val `naive-http` =
     .settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
-        "io.shaka" %% "naive-http" % "122"
+        "io.shaka" %% "naive-http" % "126"
       ),
       resolvers += ("Tim Tennant's repo" at "http://dl.bintray.com/timt/repo/")
         .withAllowInsecureProtocol(true)
@@ -70,7 +70,7 @@ lazy val sttp =
     .settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
-        "com.softwaremill.sttp.client3" %% "core" % "3.5.1"
+        "com.softwaremill.sttp.client3" %% "core" % "3.9.7"
       )
     )
 
@@ -79,7 +79,7 @@ lazy val requests =
     .settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
-        "com.lihaoyi" %% "requests" % "0.7.0"
+        "com.lihaoyi" %% "requests" % "0.9.0"
       )
     )
 
