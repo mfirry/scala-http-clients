@@ -11,7 +11,7 @@ lazy val dispatch =
     .settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
-        "org.dispatchhttp" %% "dispatch-core" % "1.2.0"
+        "org.dispatchhttp" %% "dispatch-core" % "2.0.0"
       )
     )
 
