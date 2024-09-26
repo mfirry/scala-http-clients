@@ -4,7 +4,7 @@ version := "1.2.13.7"
 
 ThisBuild / scalafmtOnCompile := true
 
-val scalaV = "2.13.14"
+val scalaV = "2.13.15"
 
 lazy val dispatch =
   (project in file("dispatch"))
