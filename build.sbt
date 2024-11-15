@@ -1,10 +1,10 @@
 name := """scala-http-clients"""
 
-version := "1.2.13.7"
+version := "1.2.13.15"
 
 ThisBuild / scalafmtOnCompile := true
 
-val scalaV = "2.13.14"
+val scalaV = "2.13.15"
 
 lazy val dispatch =
   (project in file("dispatch"))
