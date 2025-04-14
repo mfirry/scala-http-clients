@@ -20,8 +20,8 @@ lazy val gigahorse =
     .settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
-        "com.eed3si9n" %% "gigahorse-core" % "0.6.0",
-        "com.eed3si9n" %% "gigahorse-asynchttpclient" % "0.6.0"
+        "com.eed3si9n" %% "gigahorse-core" % "0.8.0",
+        "com.eed3si9n" %% "gigahorse-asynchttpclient" % "0.8.0"
       )
     )
 
