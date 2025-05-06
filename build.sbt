@@ -89,7 +89,6 @@ lazy val root = project
     dispatch,
     gigahorse,
     http4s,
-    `naive-http`,
     play,
     requests,
     scalaj,
