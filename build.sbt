@@ -4,7 +4,7 @@ version := "1.2.13.15"
 
 ThisBuild / scalafmtOnCompile := true
 
-val scalaV = "2.13.16"
+val scalaV = "3.3.6"
 
 lazy val dispatch =
   (project in file("dispatch"))
@@ -40,17 +40,8 @@ lazy val play =
     .settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
-        "com.typesafe.play" %% "play-ahc-ws-standalone" % "2.1.3",
-        "com.typesafe.play" %% "play-ws-standalone-json" % "2.1.3"
-      )
-    )
-
-lazy val scalaj =
-  (project in file("scalaj"))
-    .settings(
-      scalaVersion := scalaV,
-      libraryDependencies ++= Seq(
-        "org.scalaj" %% "scalaj-http" % "2.4.2"
+        "org.playframework" %% "play-ahc-ws-standalone" % "3.0.7",
+        "org.playframework" %% "play-ws-standalone-json" % "3.0.7"
       )
     )
 
@@ -91,6 +82,5 @@ lazy val root = project
     http4s,
     play,
     requests,
-    scalaj,
     sttp
   )

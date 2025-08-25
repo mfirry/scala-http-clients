@@ -18,7 +18,7 @@ object Play {
     val url = "https://api.github.com/users/scala-italy"
     val ws = new StandaloneAhcWSClient(w)(null)
     val res =
-      ws.url(url).addHttpHeaders("User-Agent" -> "Awesome-Octocat-App").get
+      ws.url(url).addHttpHeaders("User-Agent" -> "Awesome-Octocat-App").get()
 
     val x = Await.result(res, 1 second)
     println(x.body)
