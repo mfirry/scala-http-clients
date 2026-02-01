@@ -79,7 +79,7 @@ lazy val requests =
     .settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
-        "com.lihaoyi" %% "requests" % "0.9.0"
+        "com.lihaoyi" %% "requests" % "0.9.3"
       )
     )
 
